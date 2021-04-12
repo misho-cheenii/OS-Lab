@@ -209,8 +209,9 @@ int main(void)
 {
     char *args[MAX_LINE / 2 + 1] = { NULL };
     char command[MAX_LINE + 1] = "";
+    int should_run = 1; /* flag to determine when to exit program */
 
-    while (1) 
+    while (should_run) 
     {
         printf("osh>");
         fflush(stdout);
@@ -224,24 +225,28 @@ int main(void)
 
         /* Continue or exit */
 
-	if(strcmp(args[0], "cd")==0 ) 
+	if(args_num == 0) 
 	{
-	    if(changeDirectory(args, args_num) != 0) 
-	    {
-		continue;
-            }
+	    if(strcmp(args[0], "cd") == 0)
+    	    {
+	        if(changeDirectory(args, args_num) != 0)
+		    continue;
+	    }
+
+    	    else if(strcmp(args[0], "exit") == 0)
+                should_run = 0;
+	    
+	    else
+		/* Run command */
+		run_command(args, args_num);
 	}
 
-	else if(args_num == 0) { // empty input
+	else // empty input
+	{ 
             printf("Please enter the command! (or type \"exit\" to exit)\n");
             continue;
         }
-
-        else if(strcmp(args[0], "exit") == 0) {
-            break;
-        }
-        /* Run command */
-        run_command(args, args_num);
+        
     }
     
     clear_args(args);
