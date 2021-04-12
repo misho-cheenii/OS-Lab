@@ -16,9 +16,7 @@ system.
 - Run **gcc shell.c -o shell** on terminal.
 - For history enter **!!**.
 - For I/O redirection use the **>** and **<** redirection operators, where ‘>’ redirects the output of a command to a file and ‘<’ redirects
-the input to a command from a file.
-
- For example, if a user enters osh>ls > out.txt the output from the ls
+the input to a command from a file.<br/>For example, if a user enters osh>ls > out.txt the output from the ls
 command will be redirected to the file out.txt.
 
  Similarly, input can be redirected as well. For example, if the user enters
