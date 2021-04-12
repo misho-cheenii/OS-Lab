@@ -22,10 +22,10 @@ the input to a command from a file. For example, if a user enters
     osh>ls > out.txt
 </p>
 
-the output from the ls command will be redirected to the file out.txt. Similarly, input can be redirected as well. For example, if the user enters
+⋅⋅⋅the output from the ls command will be redirected to the file out.txt. Similarly, input can be redirected as well. For example, if the user enters
 
 <p align="center">
     osh>sort < in.txt
 </p>
 
-the file in.txt will serve as input to the sort command.
+⋅⋅⋅the file in.txt will serve as input to the sort command.
