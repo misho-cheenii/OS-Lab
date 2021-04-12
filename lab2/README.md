@@ -18,14 +18,10 @@ system.
 - For I/O redirection use the **>** and **<** redirection operators, where ‘>’ redirects the output of a command to a file and ‘<’ redirects
 the input to a command from a file. For example, if a user enters
 
-<p align="center">
-    osh>ls > out.txt
-</p>
+⋅⋅⋅osh>ls > out.txt
 
 ⋅⋅⋅the output from the ls command will be redirected to the file out.txt. Similarly, input can be redirected as well. For example, if the user enters
 
-<p align="center">
-    osh>sort < in.txt
-</p>
+⋅⋅⋅osh>sort < in.txt
 
 ⋅⋅⋅the file in.txt will serve as input to the sort command.
