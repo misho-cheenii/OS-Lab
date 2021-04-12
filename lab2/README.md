@@ -22,4 +22,4 @@ command will be redirected to the file out.txt.
 <p align="center">
     osh>sort < in.txt
 </p><br/>
-the file in.txt will serve as input to the sort command.
+<br/>the file in.txt will serve as input to the sort command.
