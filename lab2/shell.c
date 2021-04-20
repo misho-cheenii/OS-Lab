@@ -225,7 +225,7 @@ int main(void)
 
         /* Continue or exit */
 
-	if(args_num == 0) 
+	if(args_num != 0) 
 	{
 	    if(strcmp(args[0], "cd") == 0)
     	    {
